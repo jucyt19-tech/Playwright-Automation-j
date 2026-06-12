@@ -1,0 +1,18 @@
+[
+{
+      "username":"Sara13",
+      "password":"jucy@123"
+},
+{       
+      "invalidusername":"JJJJJJJ",
+      "invalidpassword":"j@@@@"        
+},
+{
+        "name":"Jucy",
+        "country":"India",
+        "city":"Ernakulam",
+        "card":"123456789",
+        "month":"June",
+        "year":"2026"
+}
+]
