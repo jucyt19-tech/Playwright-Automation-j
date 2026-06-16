@@ -10,7 +10,7 @@ test.beforeEach('Click on Login link before each test',async({page})=>{
     await expect(page.getByRole('dialog',{name:'Log in'})).toBeVisible()
 })
 //  3. Verify login with valid credentials 
-test('01 Login with valid username and password',async({page})=>{
+test('03 Login with valid username and password',async({page})=>{
     const login=new Loginpage(page)
     await login.loginusernamepassword(testdata[0].username,testdata[0].password)
     await login.clickloginbutton()  
@@ -18,7 +18,7 @@ test('01 Login with valid username and password',async({page})=>{
 })
 
 //  4. Verify login with invalid username and valid password 
-test('02 Login with Invalid username and valid password',async({page})=>{
+test('04 Login with Invalid username and valid password',async({page})=>{
     const login=new Loginpage(page)
     await login.loginusernamepassword(testdata[1].invalidusername,testdata[0].password)
     await login.clickloginbutton()     
@@ -30,7 +30,7 @@ test('02 Login with Invalid username and valid password',async({page})=>{
 })
 
 //  5. Verify login with valid username and invalid password 
-test('03 Login with valid username and Invalid password',async({page})=>{
+test('05 Login with valid username and Invalid password',async({page})=>{
     const login=new Loginpage(page)
     await login.loginusernamepassword(testdata[0].username,testdata[1].invalidpassword)
     await login.clickloginbutton()     
@@ -42,7 +42,7 @@ test('03 Login with valid username and Invalid password',async({page})=>{
 })
 
 //  6. Verify login with invalid username and invalid password 
-test('04 Login with invalid username and password ',async({page})=>{
+test('06 Login with invalid username and password ',async({page})=>{
     const login=new Loginpage(page)
     await login.loginusernamepassword(testdata[1].invalidusername,testdata[1].invalidpassword)
     await login.clickloginbutton()     
@@ -54,7 +54,7 @@ test('04 Login with invalid username and password ',async({page})=>{
 })
 
 //  10. Login with valid credentials -> Logout 
-test('05 Login and Logout',async({page})=>{
+test('07 Login and Logout',async({page})=>{
     const login=new Loginpage(page)
     await login.loginusernamepassword(testdata[0].username,testdata[0].password)  
     await login.clickloginbutton()  

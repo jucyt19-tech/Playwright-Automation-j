@@ -9,7 +9,7 @@ test.beforeEach('Login to application before each test',async({page})=>{
     await expect(page.locator('#nameofuser')).toHaveText(/Welcome/)
 })
 //  7. Login with valid credentials -> Select a product -> Add to Cart -> Click "ok" on the popup 
-test('01 Select product add to cart click ok',async({page})=>{
+test('08 Select product add to cart click ok',async({page})=>{
     const login=new Loginpage(page)
     await page.getByRole('link',{name:'Nokia lumia 1520'}).click()
     await expect(page.getByRole('heading',{name:'Nokia lumia 1520'})).toBeVisible()
@@ -24,7 +24,7 @@ test('01 Select product add to cart click ok',async({page})=>{
 })
 
 //  8. Login with valid credentials -> Select a product under Phones->Add to Cart -> Click "ok" on the popup -> Add details -> Purchase 
-test('02 Select product under phones and purchase',async({page})=>{
+test('09 Select product under phones and purchase',async({page})=>{
     const login=new Loginpage(page)
     await expect(page.getByText('Phones')).toBeVisible()
     await page.getByText('Phones').click()
@@ -50,7 +50,7 @@ test('02 Select product under phones and purchase',async({page})=>{
 })
 
 //  9.  Login with valid credentials -> Select a product under Monitors-> Add to Cart -> Click "ok" on the popup -> Add details -> Purchase 
-test('03 Select product under Monitors and purchase ',async({page})=>{
+test('10 Select product under Monitors and purchase ',async({page})=>{
     const login=new Loginpage(page)
     await expect(page.getByText('Monitors')).toBeVisible()
     await page.getByText('Monitors').click()
