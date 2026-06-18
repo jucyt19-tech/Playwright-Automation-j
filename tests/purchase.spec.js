@@ -6,7 +6,7 @@ const testdata=require('../utils/testingdata.json')
 test.beforeEach('Login to application before each test',async({page})=>{
     const login=new Loginpage(page)
     await login.logintoapp(testdata[0].username,testdata[0].password) 
-    await expect(page.locator('#nameofuser')).toHaveText(/Welcome/)
+    await expect(page.locator('#nameofuser:visible')).toHaveText(/Welcome/)
 })
 //  7. Login with valid credentials -> Select a product -> Add to Cart -> Click "ok" on the popup 
 test('08 Select product add to cart click ok',async({page})=>{
